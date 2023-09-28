@@ -1,10 +1,32 @@
-//keypress
+//getting the html elements
+const dec = document.getElementById("decbtn");
+const inc = document.getElementById("incbtn");
+const res = document.getElementById("resetbtn");
+const disp = document.getElementById("dispval");
 
-// The keypress event is fired when a key that produces a character value is pressed down.
+// for decremnt button click
+dec.addEventListener("click", () => {
+    const value = Number(disp.innerText);
+    if (value > 0) {
+      disp.innerText = value - 1;
+    } else {
+      alert("Negative value not allowed");
+    }
+  });
 
-const okp = document.getElementById("inputText");
-const disp = document.getElementById("disp");
+// for Increment button click
 
-okp.addEventListener("keypress", (e) => {
-    disp.innerText = "You have Pressed " + e.key;
+inc.addEventListener("click", () => {
+    const value = Number(disp.innerText);
+    if(value >= 10){
+        alert("10+ value not allowed");
+    }else{
+        disp.innerText = value + 1;
+    }
+})
+
+// for reset button click
+
+res.addEventListener("click", () => {
+    disp.innerText = 0;
 })

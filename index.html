@@ -3,15 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>on Key Press</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Counter App</title>
+
+    <!-- adding the css file  -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="box">
-      <h1 id="disp"></h1>
-      <input id="inputText" type="text" placeholder="type anything" />
+    <div class="container">
+      <h1>Counter App</h1>
+
+      <div class="mid">
+        <button id="decbtn">Decrement by 1</button>
+        <span id="dispval">0</span>
+        <button id="incbtn">Increment by 1</button>
+      </div>
+
+      <button id="resetbtn">Reset</button>
     </div>
 
-    <script src="./script.js"></script>
+    <!-- adding the JS file -->
+    <script src="script.js"></script>
   </body>
 </html>
